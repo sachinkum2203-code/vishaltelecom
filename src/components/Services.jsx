@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, Router, Tv, Film, Camera, Network, ArrowRight, Sparkles } from 'lucide-react';
+import { Wifi, Router, Tv, Film, Camera, Network } from 'lucide-react';
 import './Services.css';
 
 export default function Services({ onOpenAvailability }) {
@@ -85,11 +85,6 @@ export default function Services({ onOpenAvailability }) {
 
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
-
-                <a href={service.link} className="service-link-btn">
-                  <span>Explore Solution</span>
-                  <ArrowRight size={16} className="text-red" />
-                </a>
               </div>
             );
           })}
