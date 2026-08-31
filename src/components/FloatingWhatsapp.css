@@ -11,6 +11,10 @@
   pointer-events: auto !important;
 }
 
+body.mobile-menu-active .floating-whatsapp-container {
+  display: none !important;
+}
+
 .whatsapp-tooltip {
   background-color: #111827;
   color: #ffffff;

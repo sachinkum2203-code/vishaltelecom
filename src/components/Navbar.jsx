@@ -1,5 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight, ChevronLeft, PhoneCall, MapPin, Clock, Activity, ArrowRight } from 'lucide-react';
+import {
+  Menu,
+  X,
+  ChevronRight,
+  PhoneCall,
+  MapPin,
+  Clock,
+  Activity,
+  ArrowRight,
+  Home,
+  FileText,
+  Settings,
+  Tv,
+  Camera,
+  Users,
+} from 'lucide-react';
 import vsLogo from '../assets/vs_telecom_logo_transparent.png';
 import './Navbar.css';
 
@@ -32,9 +47,14 @@ export default function Navbar({ onOpenAvailability }) {
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('mobile-menu-active');
     } else {
       document.body.style.overflow = '';
+      document.body.classList.remove('mobile-menu-active');
     }
+    return () => {
+      document.body.classList.remove('mobile-menu-active');
+    };
   }, [mobileMenuOpen]);
 
   useEffect(() => {
@@ -66,13 +86,13 @@ export default function Navbar({ onOpenAvailability }) {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Plans', href: '#plans' },
-    { name: 'Services', href: '#services' },
-    { name: 'OTT & TV', href: '#ott' },
-    { name: 'CCTV', href: '#cctv' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '#home', icon: Home },
+    { name: 'Plans', href: '#plans', icon: FileText },
+    { name: 'Services', href: '#services', icon: Settings },
+    { name: 'OTT & TV', href: '#ott', icon: Tv },
+    { name: 'CCTV', href: '#cctv', icon: Camera },
+    { name: 'About Us', href: '#about', icon: Users },
+    { name: 'Contact', href: '#contact', icon: PhoneCall },
   ];
 
   return (
@@ -104,7 +124,6 @@ export default function Navbar({ onOpenAvailability }) {
           <img src={vsLogo} alt="VS TELECOM — Connecting You Everyday" className="navbar-logo-img" />
         </a>
 
-
         {/* Desktop Navigation */}
         <nav className="navbar-links">
           {navLinks.map((link) => (
@@ -126,45 +145,122 @@ export default function Navbar({ onOpenAvailability }) {
           </button>
         </div>
 
-
-
         {/* Mobile Menu Toggle Button */}
         <button
           className="mobile-toggle-btn"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle Navigation Menu"
+          onClick={() => setMobileMenuOpen(true)}
+          aria-label="Open Navigation Menu"
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <Menu size={24} />
         </button>
       </div>
 
-      {/* Mobile Nav Drawer */}
+      {/* Fullscreen Mobile Nav Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="mobile-nav-drawer">
-          <div className="mobile-nav-links">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`mobile-nav-link ${activeSection === link.href.replace('#', '') ? 'active' : ''}`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <ChevronLeft size={16} className="text-red" />
-                <span>{link.name}</span>
-              </a>
-            ))}
-
-            <div className="mobile-cta-box">
+        <div className="mobile-nav-drawer-overlay">
+          <div className="mobile-nav-drawer-content">
+            {/* Header with logo & close icon */}
+            <div className="mobile-drawer-header">
+              <img src={vsLogo} alt="VS TELECOM" className="mobile-drawer-logo" />
               <button
-                className="btn btn-red mobile-fit-cta"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenAvailability();
-                }}
+                className="mobile-close-btn"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
               >
-                <PhoneCall size={16} />
-                <span>Get Connection</span>
+                <X size={20} />
               </button>
+            </div>
+
+            {/* Menu Items List */}
+            <div className="mobile-nav-links-list">
+              {navLinks.map((link) => {
+                const IconComp = link.icon;
+                const isActive = activeSection === link.href.replace('#', '');
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className={`mobile-nav-item ${isActive ? 'active' : ''}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <div className="m-item-left">
+                      <div className="m-icon-badge">
+                        <IconComp size={18} />
+                      </div>
+                      <span className="m-item-title">{link.name}</span>
+                    </div>
+                    <ChevronRight size={18} className="m-item-arrow" />
+                  </a>
+                );
+              })}
+            </div>
+
+            {/* Need Help / Get Connection Card */}
+            <div
+              className="mobile-cta-card"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenAvailability();
+              }}
+            >
+              <div className="m-cta-phone-icon">
+                <PhoneCall size={22} />
+              </div>
+              <div className="m-cta-text">
+                <span className="m-cta-label">Need Help?</span>
+                <strong className="m-cta-title">Get Connection</strong>
+                <span className="m-cta-sub">Call us now for best plans</span>
+              </div>
+              <div className="m-cta-arrow-btn">
+                <ArrowRight size={18} />
+              </div>
+            </div>
+
+            {/* Follow Us Social Section */}
+            <div className="mobile-social-section">
+              <h4 className="m-social-heading">Follow Us</h4>
+              <div className="m-social-icons">
+                <a
+                  href="https://www.facebook.com/profile.php?id=61593772052305&sk=about"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <FacebookIcon size={16} />
+                </a>
+                <a
+                  href="https://www.instagram.com/vs_telecommunication/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon size={16} />
+                </a>
+                <a
+                  href="https://www.youtube.com/@VS_TELECOMMUNICATION"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <YoutubeIcon size={16} />
+                </a>
+                <a
+                  href="https://wa.me/917027104250"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c-.001 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Bottom Slogan Accent */}
+            <div className="mobile-drawer-footer-text">
+              <span>Fast Internet. Stronger Tomorrow.</span>
+              <span className="footer-accent-line"></span>
             </div>
           </div>
         </div>

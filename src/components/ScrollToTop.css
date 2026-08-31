@@ -21,6 +21,10 @@
   animation: fadeInUp 0.3s ease-out;
 }
 
+body.mobile-menu-active .scroll-to-top-btn {
+  display: none !important;
+}
+
 .scroll-to-top-btn:hover {
   background-color: var(--red-cta, #e31b23);
   border-color: var(--red-cta, #e31b23);
