@@ -4,7 +4,7 @@ import './FreeInstallationStrip.css';
 
 export default function FreeInstallationStrip({ onOpenAvailability }) {
   return (
-    <section className="free-install-strip screen-section">
+    <section className="free-install-strip page-screen-section screen-section">
       <div className="container free-install-container">
         <div className="free-install-left">
           <div className="free-install-badge">

@@ -97,7 +97,7 @@ img {
 }
 
 :root {
-  --desktop-header-height: 125px;
+  --desktop-header-height: 130px;
 }
 
 .section-padding {
@@ -105,50 +105,59 @@ img {
 }
 
 /* ==========================================================================
-   SCREEN SECTION VIEWPORT RESPONSIVENESS SYSTEM (DESKTOP & LAPTOP SCREENS)
+   DESKTOP / LAPTOP PAGE SCREEN SECTION & SCROLL SNAP SYSTEM
    ========================================================================== */
 
-/* DESKTOP/LAPTOP (1024px and wider): Occupy approximately one full viewport per major section */
+/* DESKTOP/LAPTOP (1024px and wider): Occupy one full viewport per major section with scroll snap */
 @media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: var(--desktop-header-height, 130px);
+  }
+
+  .page-screen-section,
   .screen-section {
-    min-height: calc(100vh - var(--desktop-header-height, 125px));
-    min-height: calc(100dvh - var(--desktop-header-height, 125px));
-    height: auto !important;
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--desktop-header-height, 130px));
+    min-height: calc(100dvh - var(--desktop-header-height, 130px));
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-sizing: border-box;
+    padding-top: clamp(32px, 4vh, 60px);
+    padding-bottom: clamp(32px, 4vh, 60px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 }
 
-/* SHORT LAPTOP SCREENS (e.g., 1366x768, 1280x720, max-height 800px): Natural growth + compact padding */
+/* SHORT LAPTOP SCREENS (1280x720, 1366x768, 1440x900, 1536x864, max-height 800px) */
 @media (min-width: 1024px) and (max-height: 800px) {
   :root {
     --desktop-header-height: 115px;
   }
 
+  html {
+    scroll-padding-top: var(--desktop-header-height, 115px);
+  }
+
+  .page-screen-section,
   .screen-section {
     min-height: calc(100vh - var(--desktop-header-height, 115px));
     min-height: calc(100dvh - var(--desktop-header-height, 115px));
-    height: auto !important;
-    padding-top: 28px !important;
-    padding-bottom: 28px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .section-padding {
-    padding-block: clamp(24px, 3.5vh, 44px);
+    padding-block: clamp(20px, 3vh, 36px);
   }
 
   .section-header {
-    margin-bottom: clamp(12px, 2vh, 20px);
+    margin-bottom: clamp(10px, 1.8vh, 18px);
   }
 
   .section-title {
-    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-size: clamp(1.4rem, 2.2vw, 1.95rem);
     margin-top: 2px;
     margin-bottom: 4px;
   }
@@ -159,12 +168,19 @@ img {
   }
 }
 
-/* MOBILE & TABLET (max-width 1023px): Natural height flow */
+/* MOBILE & TABLET (max-width 1023px): Normal continuous scrolling */
 @media (max-width: 1023px) {
+  html {
+    scroll-snap-type: none;
+    scroll-padding-top: 72px;
+  }
+
+  .page-screen-section,
   .screen-section {
     min-height: auto !important;
     height: auto !important;
     display: block !important;
+    scroll-snap-align: none !important;
   }
 }
 

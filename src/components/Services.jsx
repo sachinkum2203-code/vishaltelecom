@@ -55,7 +55,7 @@ export default function Services({ onOpenAvailability }) {
   ];
 
   return (
-    <section id="services" className="services-section screen-section section-padding">
+    <section id="services" className="services-section page-screen-section screen-section section-padding">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">

@@ -1,10 +1,6 @@
 .social-section {
   background-color: var(--bg-light);
   border-bottom: 1px solid var(--border-light);
-  padding: clamp(28px, 4vw, 56px) 0 !important;
-  min-height: auto !important;
-  height: auto !important;
-  display: block;
   box-sizing: border-box;
 }
 
