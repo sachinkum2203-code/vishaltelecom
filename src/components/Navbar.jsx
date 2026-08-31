@@ -47,13 +47,20 @@ export default function Navbar({ onOpenAvailability }) {
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
       document.body.classList.add('mobile-menu-active');
+      document.documentElement.classList.add('mobile-menu-active');
     } else {
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
       document.body.classList.remove('mobile-menu-active');
+      document.documentElement.classList.remove('mobile-menu-active');
     }
     return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
       document.body.classList.remove('mobile-menu-active');
+      document.documentElement.classList.remove('mobile-menu-active');
     };
   }, [mobileMenuOpen]);
 
@@ -157,7 +164,7 @@ export default function Navbar({ onOpenAvailability }) {
 
       {/* Fullscreen Mobile Nav Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="mobile-nav-drawer-overlay">
+        <div className="mobile-nav-drawer-overlay" onTouchMove={(e) => e.preventDefault()}>
           <div className="mobile-nav-drawer-content">
             {/* Header with logo & close icon */}
             <div className="mobile-drawer-header">

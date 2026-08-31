@@ -198,6 +198,15 @@
   padding: 8px;
 }
 
+html.mobile-menu-active,
+body.mobile-menu-active {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  touch-action: none !important;
+  overscroll-behavior: none !important;
+}
+
 /* Mobile Drawer Overlay Fullscreen (Fixed 100vh, No Scroll) */
 .mobile-nav-drawer-overlay {
   position: fixed !important;
@@ -211,6 +220,8 @@
   background-color: #ffffff !important;
   z-index: 10000000 !important;
   overflow: hidden !important;
+  touch-action: none !important;
+  overscroll-behavior: none !important;
   padding: 12px 18px 16px;
   display: flex !important;
   flex-direction: column;
