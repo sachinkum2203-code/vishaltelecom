@@ -11,7 +11,8 @@ import {
   Phone,
   Mail,
   ArrowRight,
-  PhoneCall
+  PhoneCall,
+  Gift
 } from 'lucide-react';
 import vsLogo from '../assets/vs_telecom_logo_transparent.png';
 import './Footer.css';
@@ -104,6 +105,7 @@ export default function Footer() {
               <li><a href="#ott"><Tv size={17} className="service-icon" /><span>OTT & TV Entertainment</span></a></li>
               <li><a href="#cctv"><Camera size={17} className="service-icon" /><span>CCTV Surveillance</span></a></li>
               <li><a href="#wireless"><Router size={17} className="service-icon" /><span>Network Solutions</span></a></li>
+              <li><a href="#free-installation"><Gift size={17} className="service-icon" /><span>Free Installation</span></a></li>
               <li><a href="#contact"><Headphones size={17} className="service-icon" /><span>Customer Support</span></a></li>
             </ul>
           </div>

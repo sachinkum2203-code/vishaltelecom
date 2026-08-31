@@ -4,7 +4,7 @@ import './ConnectionCta.css';
 
 export default function ConnectionCta({ onOpenAvailability }) {
   return (
-    <section className="connection-cta-section page-section">
+    <section id="free-installation" className="connection-cta-section page-section">
       <div className="container connection-cta-container">
         <div className="connection-cta-content">
           <div className="cta-free-badge">
