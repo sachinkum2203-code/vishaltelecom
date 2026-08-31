@@ -134,7 +134,7 @@
 
 @media (max-width: 600px) {
   .connection-cta-section {
-    padding: 130px 20px !important;
+    padding: 40px 20px !important;
   }
   .cta-buttons-wrap {
     flex-direction: column;

@@ -203,11 +203,10 @@ body.mobile-menu-active {
   overflow: hidden !important;
   height: 100vh !important;
   height: 100dvh !important;
-  touch-action: none !important;
+  touch-action: pan-y !important;
   overscroll-behavior: none !important;
 }
 
-/* Mobile Drawer Overlay Fullscreen (Fixed 100vh, No Scroll) */
 .mobile-nav-drawer-overlay {
   position: fixed !important;
   top: 0 !important;
@@ -219,9 +218,10 @@ body.mobile-menu-active {
   height: 100dvh !important;
   background-color: #ffffff !important;
   z-index: 10000000 !important;
-  overflow: hidden !important;
-  touch-action: none !important;
-  overscroll-behavior: none !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y !important;
+  overscroll-behavior: contain !important;
   padding: 12px 18px 16px;
   display: flex !important;
   flex-direction: column;
