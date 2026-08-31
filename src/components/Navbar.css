@@ -12,8 +12,8 @@
 
 .top-info-bar {
   background-color: #FFFFFF;
-  padding: 6px 0;
-  font-size: 0.76rem;
+  padding: clamp(4px, 0.6vh, 6px) 0;
+  font-size: clamp(0.7rem, 0.74vw, 0.76rem);
   color: var(--text-secondary);
 }
 
@@ -84,11 +84,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: clamp(52px, 5.5vh, 64px);
 }
 
 .navbar-logo-img {
-  height: clamp(52px, 4.5vw, 68px);
+  height: clamp(44px, 3.8vw, 62px);
   width: auto;
   object-fit: contain;
   display: block;

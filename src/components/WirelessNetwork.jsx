@@ -13,7 +13,7 @@ export default function WirelessNetwork({ onOpenAvailability }) {
   ];
 
   return (
-    <section id="wireless" className="wireless-section section-padding">
+    <section id="wireless" className="wireless-section screen-section section-padding">
       <div className="container wireless-container">
         {/* Left Column: Text & Features */}
         <div className="wireless-left">

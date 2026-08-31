@@ -108,7 +108,43 @@
   flex-shrink: 0;
 }
 
-/* Responsive Media Queries */
+@media (max-width: 1440px) and (max-height: 850px) {
+  .ott-section {
+    padding-block: clamp(20px, 3vh, 36px) !important;
+  }
+
+  .ott-row-grid {
+    gap: 12px clamp(10px, 1.5vw, 18px);
+    margin-bottom: 16px;
+  }
+
+  .ott-app-box {
+    min-height: 56px;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+
+  .ott-app-info {
+    margin-top: 4px;
+  }
+
+  .ott-app-name {
+    font-size: 0.8rem;
+  }
+
+  .ott-app-sub {
+    font-size: 0.68rem;
+  }
+
+  .ott-disclaimer-box {
+    padding: 10px 16px;
+  }
+
+  .disclaimer-text {
+    font-size: 0.84rem;
+  }
+}
+
 @media (max-width: 1100px) {
   .ott-row-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));

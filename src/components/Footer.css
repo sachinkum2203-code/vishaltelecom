@@ -1,8 +1,8 @@
 .telecom-footer {
   background-color: #0E0F13;
   color: #9CA3AF;
-  padding-top: clamp(48px, 6vw, 70px);
-  padding-bottom: 28px;
+  padding-top: clamp(32px, 4.5vw, 56px);
+  padding-bottom: 24px;
   font-family: var(--font-body);
   position: relative;
   overflow: hidden;

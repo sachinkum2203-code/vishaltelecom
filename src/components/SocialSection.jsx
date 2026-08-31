@@ -63,7 +63,7 @@ export default function SocialSection() {
 
 
   return (
-    <section className="social-section section-padding">
+    <section className="social-section screen-section section-padding">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">

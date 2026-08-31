@@ -1,25 +1,24 @@
 .benefits-section {
   background-color: var(--white);
   border-bottom: 1px solid var(--border-light);
-  padding: clamp(48px, 6vh, 80px) 0 !important;
-  min-height: calc(100vh - 100px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: clamp(28px, 4vw, 56px) 0 !important;
+  min-height: auto !important;
+  height: auto !important;
+  display: block;
   box-sizing: border-box;
 }
 
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(20px, 2.5vw, 32px);
+  gap: clamp(14px, 1.8vw, 24px);
 }
 
 .benefit-card {
   background-color: var(--white);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
-  padding: clamp(28px, 3.5vh, 40px) clamp(20px, 2vw, 26px);
+  padding: clamp(16px, 2.2vh, 24px) clamp(16px, 1.8vw, 22px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -35,28 +34,50 @@
 }
 
 .benefit-icon-box {
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   background-color: var(--red-light);
   border: 1px solid var(--red-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .benefit-card-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--text-dark);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .benefit-card-desc {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.5;
+}
+
+@media (max-width: 1440px) and (max-height: 850px) {
+  .benefits-section {
+    padding: clamp(20px, 3vh, 36px) 0 !important;
+  }
+  .benefit-card {
+    padding: 14px 16px;
+  }
+  .benefit-icon-box {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 8px;
+  }
+  .benefit-card-title {
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+  }
+  .benefit-card-desc {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
 }
 
 @media (max-width: 1023px) {

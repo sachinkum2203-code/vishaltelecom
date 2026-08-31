@@ -1,7 +1,7 @@
 .connection-cta-section {
   background-color: var(--red-light);
   color: var(--text-dark);
-  padding: clamp(80px, 8vw, 120px) 24px !important;
+  padding: clamp(36px, 5vw, 64px) 24px !important;
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(215, 25, 32, 0.15);
@@ -104,6 +104,32 @@
   font-size: 0.86rem;
   color: var(--text-secondary);
   font-weight: 500;
+}
+
+@media (max-width: 1440px) and (max-height: 850px) {
+  .connection-cta-section {
+    padding: clamp(28px, 4vh, 48px) 20px !important;
+  }
+
+  .connection-cta-title {
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    margin-bottom: 8px;
+  }
+
+  .connection-cta-desc {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-buttons-wrap {
+    margin-bottom: 16px;
+  }
+
+  .cta-primary-btn {
+    height: 44px;
+    padding: 0 22px;
+    font-size: 0.88rem;
+  }
 }
 
 @media (max-width: 600px) {

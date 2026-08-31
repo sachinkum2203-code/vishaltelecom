@@ -282,6 +282,93 @@
   stroke: #FFFFFF !important;
 }
 
+@media (max-width: 1440px) and (max-height: 850px) {
+  .plans-section {
+    padding: clamp(20px, 3vh, 32px) 0 !important;
+  }
+
+  .plans-section .section-header {
+    margin-bottom: 8px !important;
+  }
+
+  .plans-section .section-title {
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem) !important;
+    margin-bottom: 2px !important;
+  }
+
+  .plans-section .section-subtitle {
+    font-size: 0.82rem !important;
+  }
+
+  .billing-tabs-container {
+    margin-top: 4px;
+    margin-bottom: 12px;
+    padding: 3px;
+  }
+
+  .billing-tab {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .plans-grid {
+    gap: clamp(10px, 1.2vw, 14px);
+  }
+
+  .plan-card {
+    padding: 12px 14px;
+  }
+
+  .plan-card-header {
+    margin-bottom: 4px;
+  }
+
+  .plan-top-row {
+    margin-bottom: 4px;
+  }
+
+  .plan-name {
+    font-size: 1.02rem;
+    margin-bottom: 1px;
+  }
+
+  .plan-subtitle {
+    font-size: 0.72rem;
+    margin-bottom: 3px;
+  }
+
+  .plan-price-box {
+    margin-bottom: 6px;
+    padding: 4px 0;
+  }
+
+  .price-display .amount {
+    font-size: 1.45rem;
+  }
+
+  .free-install-ribbon {
+    padding: 3px 8px;
+    font-size: 0.68rem;
+    margin-bottom: 6px;
+  }
+
+  .plan-features {
+    gap: 3px;
+    margin-bottom: 8px;
+  }
+
+  .feature-line {
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+
+  .plan-card .btn {
+    padding: 8px 16px;
+    font-size: 0.78rem;
+    min-height: 36px;
+  }
+}
+
 @media (max-width: 1023px) {
   .plans-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

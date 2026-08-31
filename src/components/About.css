@@ -138,23 +138,21 @@
   }
 }
 
-/* SHORT HEIGHT VIEWPORTS ADAPTATION (<780px HEIGHT) */
-@media (max-height: 780px) and (min-width: 1024px) {
+/* SHORT HEIGHT VIEWPORTS ADAPTATION (<850px HEIGHT) */
+@media (max-height: 850px) and (min-width: 1024px) {
   .about-grid {
     margin-bottom: 18px !important;
-    gap: 20px !important;
   }
-  .about-photo {
-    max-height: 240px !important;
+  .about-paragraph {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    margin-bottom: 16px;
   }
   .about-pillars-grid {
     gap: 10px !important;
   }
-  .about-card {
-    padding: 10px 14px !important;
-  }
   .stat-value {
-    font-size: 1.35rem !important;
+    font-size: 1.4rem !important;
     margin-bottom: 2px !important;
   }
   .stat-inline-item {
