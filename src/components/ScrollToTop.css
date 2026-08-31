@@ -1,0 +1,61 @@
+.scroll-to-top-btn {
+  position: fixed !important;
+  bottom: 92px !important;
+  bottom: calc(92px + env(safe-area-inset-bottom, 0px)) !important;
+  right: 24px !important;
+  z-index: 999998 !important;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #111827;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease-in-out;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: var(--red-cta, #e31b23);
+  border-color: var(--red-cta, #e31b23);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(227, 27, 35, 0.4);
+}
+
+.scroll-to-top-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Screen Adjustments */
+@media (max-width: 600px) {
+  .scroll-to-top-btn {
+    bottom: 82px !important;
+    bottom: calc(82px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 18px !important;
+    width: 44px;
+    height: 44px;
+  }
+
+  .scroll-to-top-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}

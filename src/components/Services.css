@@ -1,0 +1,122 @@
+.services-section {
+  background-color: #FBFBFB;
+  border-bottom: 1px solid var(--border-light);
+  padding: clamp(32px, 4.5vw, 60px) 0 !important;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 24px);
+}
+
+.service-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 16px;
+  padding: clamp(18px, 2.2vh, 26px) clamp(16px, 1.8vw, 24px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  min-width: 0;
+}
+
+.service-card:hover {
+  background-color: #FFFFFF;
+  border-color: var(--red-cta);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(215, 25, 32, 0.12);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #FFF0F1;
+  border: 1px solid #FCD4D6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover .service-icon-box {
+  transform: scale(1.05);
+}
+
+.service-badge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--red-cta);
+  background-color: #FFF0F1;
+  border: 1px solid #FCD4D6;
+  padding: 4px 10px;
+  border-radius: 50px;
+  letter-spacing: 0.02em;
+}
+
+.service-title {
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  font-weight: 800;
+  color: #171717;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.service-description {
+  font-size: clamp(0.82rem, 0.9vw, 0.88rem);
+  color: #5F5F5F;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.service-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--red-cta);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-top: auto;
+}
+
+.service-link-btn:hover {
+  color: var(--red-deep);
+}
+
+.service-link-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.service-link-btn:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1023px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

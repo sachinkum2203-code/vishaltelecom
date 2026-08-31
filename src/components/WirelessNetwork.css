@@ -1,0 +1,157 @@
+.wireless-section {
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.wireless-container {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wireless-left {
+  max-width: 100%;
+}
+
+.wireless-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-top: 12px;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.wireless-text {
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.wireless-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 20px;
+  margin-bottom: 32px;
+}
+
+.wf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  min-width: 0;
+}
+
+.wf-check {
+  color: var(--red-cta);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.wireless-cta {
+  padding: 16px 32px;
+}
+
+/* Right Side Graphic */
+.wifi-coverage-card {
+  background-color: var(--white);
+  border: 2px solid var(--red-cta);
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 2.5vw, 28px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06), 0 0 20px var(--red-glow);
+  min-width: 0;
+}
+
+.card-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 20px;
+}
+
+.wifi-status-badge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background-color: var(--red-light);
+  border: 1px solid var(--red-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.signal-strength {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.coverage-map-visual {
+  margin-bottom: 20px;
+}
+
+.home-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.room-box {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.room-box.active-room {
+  border-color: var(--red-border);
+  background-color: var(--red-light);
+}
+
+.room-label {
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.room-speed {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.wifi-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .wireless-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wireless-features-grid,
+  .home-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
