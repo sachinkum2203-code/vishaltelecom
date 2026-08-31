@@ -28,7 +28,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section page-screen-section screen-section">
+    <section id="contact" className="contact-section page-section">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">

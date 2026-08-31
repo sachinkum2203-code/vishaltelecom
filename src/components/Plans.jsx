@@ -95,7 +95,7 @@ export default function Plans({ onSelectPlan }) {
   ];
 
   return (
-    <section id="plans" className="plans-section page-screen-section screen-section section-padding">
+    <section id="plans" className="plans-section page-section">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">

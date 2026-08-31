@@ -18,7 +18,7 @@ import './Hero.css';
 
 export default function Hero({ onOpenAvailability, onOpenSpeedTest }) {
   return (
-    <section id="home" className="hero-section page-screen-section screen-section">
+    <section id="home" className="hero-section page-section">
       <div className="hero-full-container">
         
         {/* MAIN TWO-COLUMN SECTION */}

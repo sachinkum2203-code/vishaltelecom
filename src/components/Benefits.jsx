@@ -37,7 +37,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="benefits-section page-screen-section screen-section section-padding">
+    <section className="benefits-section page-section">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">

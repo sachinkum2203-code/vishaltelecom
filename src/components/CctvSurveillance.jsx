@@ -13,7 +13,7 @@ export default function CctvSurveillance({ onOpenAvailability }) {
   ];
 
   return (
-    <section id="cctv" className="cctv-section page-screen-section screen-section section-padding">
+    <section id="cctv" className="cctv-section page-section">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">

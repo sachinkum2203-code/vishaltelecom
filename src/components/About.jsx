@@ -51,7 +51,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="about-section page-screen-section screen-section section-padding">
+    <section id="about" className="about-section page-section">
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center">

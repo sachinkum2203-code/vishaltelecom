@@ -123,7 +123,7 @@ export default function OttEntertainment() {
   ];
 
   return (
-    <section id="ott" className="ott-section page-screen-section screen-section section-padding">
+    <section id="ott" className="ott-section page-section">
       <div className="container">
         {/* Section Header */}
         <div className="section-header">

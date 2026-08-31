@@ -97,7 +97,7 @@ img {
 }
 
 :root {
-  --desktop-header-height: 130px;
+  --header-height: 96px;
 }
 
 .section-padding {
@@ -105,51 +105,41 @@ img {
 }
 
 /* ==========================================================================
-   DESKTOP / LAPTOP PAGE SCREEN SECTION & SCROLL SNAP SYSTEM
+   UNIFIED DESKTOP SECTION HEIGHT & VERTICAL CENTERING SYSTEM (.page-section)
    ========================================================================== */
 
-/* DESKTOP/LAPTOP (1024px and wider): Occupy one full viewport per major section with scroll snap */
+/* Desktop & Laptop viewports (1024px and wider) */
 @media (min-width: 1024px) {
-  html {
-    scroll-snap-type: y mandatory;
-    scroll-padding-top: var(--desktop-header-height, 130px);
-  }
-
-  .page-screen-section,
-  .screen-section {
+  .page-section {
     box-sizing: border-box;
-    min-height: calc(100vh - var(--desktop-header-height, 130px));
-    min-height: calc(100dvh - var(--desktop-header-height, 130px));
+    min-height: calc(100vh - var(--header-height, 96px));
+    min-height: calc(100dvh - var(--header-height, 96px));
+    height: auto !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: clamp(32px, 4vh, 60px);
-    padding-bottom: clamp(32px, 4vh, 60px);
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    padding-block: clamp(24px, 3.5vh, 48px);
   }
 }
 
-/* SHORT LAPTOP SCREENS (1280x720, 1366x768, 1440x900, 1536x864, max-height 800px) */
+/* Short Laptop Screens (1280x720, 1366x768, 1440x900, 1536x864, max-height 800px) */
 @media (min-width: 1024px) and (max-height: 800px) {
   :root {
-    --desktop-header-height: 115px;
+    --header-height: 84px;
   }
 
-  html {
-    scroll-padding-top: var(--desktop-header-height, 115px);
-  }
-
-  .page-screen-section,
-  .screen-section {
-    min-height: calc(100vh - var(--desktop-header-height, 115px));
-    min-height: calc(100dvh - var(--desktop-header-height, 115px));
-    padding-top: 24px;
-    padding-bottom: 24px;
+  .page-section {
+    min-height: calc(100vh - var(--header-height, 84px));
+    min-height: calc(100dvh - var(--header-height, 84px));
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: clamp(16px, 2.5vh, 32px);
   }
 
   .section-padding {
-    padding-block: clamp(20px, 3vh, 36px);
+    padding-block: clamp(16px, 2.5vh, 32px);
   }
 
   .section-header {
@@ -168,19 +158,13 @@ img {
   }
 }
 
-/* MOBILE & TABLET (max-width 1023px): Normal continuous scrolling */
+/* Mobile & Tablet viewports (below 1024px): Natural content height */
 @media (max-width: 1023px) {
-  html {
-    scroll-snap-type: none;
-    scroll-padding-top: 72px;
-  }
-
-  .page-screen-section,
-  .screen-section {
+  .page-section {
     min-height: auto !important;
     height: auto !important;
     display: block !important;
-    scroll-snap-align: none !important;
+    padding-block: clamp(28px, 4vw, 48px) !important;
   }
 }
 
