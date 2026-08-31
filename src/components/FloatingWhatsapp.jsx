@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './FloatingWhatsapp.css';
 
 export default function FloatingWhatsapp() {
-  const [showTooltip, setShowTooltip] = useState(true);
-
   const handleClick = () => {
     const message = encodeURIComponent(
       'Hello VS Telecom! I want to check broadband/fiber connection availability at my location.'
@@ -13,21 +11,6 @@ export default function FloatingWhatsapp() {
 
   return (
     <div className="floating-whatsapp-container">
-      {showTooltip && (
-        <div className="whatsapp-tooltip">
-          <span>Need Help? Chat on WhatsApp</span>
-          <button
-            className="close-tooltip-btn"
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowTooltip(false);
-            }}
-            aria-label="Close tooltip"
-          >
-            ×
-          </button>
-        </div>
-      )}
       <button
         className="floating-whatsapp-btn"
         onClick={handleClick}

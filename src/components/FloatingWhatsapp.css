@@ -5,9 +5,9 @@
   right: 24px !important;
   z-index: 999999 !important;
   display: flex !important;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
+  flex-direction: row-reverse !important;
+  align-items: center !important;
+  gap: 12px;
   pointer-events: auto !important;
 }
 
@@ -27,7 +27,7 @@ body.mobile-menu-active .floating-whatsapp-container {
   align-items: center;
   gap: 8px;
   white-space: nowrap;
-  animation: fadeInRight 0.3s ease-out;
+  animation: fadeInLeft 0.3s ease-out;
 }
 
 .close-tooltip-btn {
@@ -95,7 +95,7 @@ body.mobile-menu-active .floating-whatsapp-container {
   }
 }
 
-@keyframes fadeInRight {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
     transform: translateX(10px);
