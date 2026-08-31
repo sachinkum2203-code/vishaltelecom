@@ -143,7 +143,12 @@
 
 @media (max-width: 650px) {
   .free-install-strip {
-    padding: 40px 0 !important;
+    min-height: calc(100vh - 60px) !important;
+    min-height: calc(100dvh - 60px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding: 130px 0 !important;
   }
   .free-install-badge {
     font-size: 0.78rem;

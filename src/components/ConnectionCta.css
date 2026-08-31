@@ -134,7 +134,12 @@
 
 @media (max-width: 600px) {
   .connection-cta-section {
-    padding: 40px 20px !important;
+    min-height: calc(100vh - 60px) !important;
+    min-height: calc(100dvh - 60px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding: 130px 20px !important;
   }
   .cta-buttons-wrap {
     flex-direction: column;
