@@ -13,7 +13,7 @@ export default function ConnectionCta({ onOpenAvailability }) {
           </div>
 
           <h2 className="connection-cta-title">
-            Built for <span>Faster Connections.</span>
+            Connection You Can <span>Trust</span>
           </h2>
 
           <p className="connection-cta-desc">
