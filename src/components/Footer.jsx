@@ -100,7 +100,6 @@ export default function Footer() {
               <span className="heading-underline"></span>
             </h4>
             <ul className="footer-services-list">
-              <li><a href="#plans"><Wifi size={17} className="service-icon" /><span>High-Speed Internet</span></a></li>
               <li><a href="#wireless"><Share2 size={17} className="service-icon" /><span>Wireless Connectivity</span></a></li>
               <li><a href="#ott"><Tv size={17} className="service-icon" /><span>OTT & Live TV Entertainment</span></a></li>
               <li><a href="#cctv"><Camera size={17} className="service-icon" /><span>CCTV Surveillance</span></a></li>
