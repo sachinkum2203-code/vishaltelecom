@@ -73,6 +73,9 @@ export default function Footer() {
               <a href="https://wa.me/917027104250" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="WhatsApp">
                 <WhatsappIcon size={18} />
               </a>
+              <a href="mailto:vstelicommunication@gmail.com" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Email">
+                <Mail size={18} />
+              </a>
             </div>
           </div>
 

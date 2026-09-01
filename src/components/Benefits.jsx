@@ -5,7 +5,7 @@ import './Benefits.css';
 export default function Benefits() {
   const benefits = [
     {
-      title: 'Fast Internet',
+      title: 'Fast Service',
       desc: 'Built for modern digital lifestyles with zero speed throttling.',
       icon: Zap,
     },
@@ -26,7 +26,7 @@ export default function Benefits() {
     },
     {
       title: 'Wireless Solutions',
-      desc: 'Professional home and office Wi-Fi 6 networks for all devices.',
+      desc: 'Professional home and office 6th Gen Wi-Fi networks for all devices.',
       icon: Router,
     },
     {

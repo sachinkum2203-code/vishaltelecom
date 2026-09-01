@@ -7,7 +7,7 @@ export default function Services({ onOpenAvailability }) {
     {
       id: 'wireless',
       title: 'Wireless Connectivity',
-      description: 'Strong wireless connectivity across your home or office. Dual-band Wi-Fi 6 coverage eliminates dead zones.',
+      description: 'Strong wireless connectivity across your home or office. Dual-band 6th Gen Wi-Fi coverage eliminates dead zones.',
       icon: Router,
       badge: 'Whole-Home Mesh',
       link: '#wireless',

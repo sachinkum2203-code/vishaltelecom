@@ -11,7 +11,7 @@ export default function About() {
       sub: 'Quick & hassle-free setup',
     },
     {
-      value: 'WiFi 6',
+      value: '6th Gen',
       label: 'Ready',
       sub: 'Faster wireless connectivity',
     },

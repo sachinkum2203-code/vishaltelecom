@@ -69,7 +69,7 @@ export default function Hero({ onOpenAvailability, onOpenSpeedTest }) {
                 <div className="feat-icon-bubble">
                   <Wifi size={18} className="text-red" />
                 </div>
-                <span className="feat-label">WiFi 6 Wireless<br />Connectivity</span>
+                <span className="feat-label">6th Gen WiFi<br />Connectivity</span>
               </div>
 
               <div className="inline-feat-item">

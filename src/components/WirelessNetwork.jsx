@@ -6,7 +6,7 @@ export default function WirelessNetwork({ onOpenAvailability }) {
   const wirelessFeatures = [
     'Better Coverage across multi-floor rooms & yards',
     'Multiple Device Connectivity (100+ active devices)',
-    'Stable Wireless Performance with Wi-Fi 6 technology',
+    'Stable Wireless Performance with 6th Gen Wi-Fi technology',
     'Professional Setup & room-by-room signal testing',
     'Secure Network with WPA3 enterprise encryption',
     'Router Configuration & SSID channel optimization',
@@ -18,7 +18,7 @@ export default function WirelessNetwork({ onOpenAvailability }) {
         {/* Left Column: Text & Features */}
         <div className="wireless-left">
           <h2 className="wireless-title">
-            WiFi 6 Wireless Solutions <span className="text-red">for Every Space</span>
+            6th Gen Wireless WiFi Solutions <span className="text-red">for Every Space</span>
           </h2>
 
           <p className="wireless-text">
