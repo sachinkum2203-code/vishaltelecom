@@ -13,7 +13,7 @@ export default function ConnectionCta({ onOpenAvailability }) {
           </div>
 
           <h2 className="connection-cta-title">
-            Ready For <span>High-Speed Internet?</span>
+            Built for <span>Faster Connections.</span>
           </h2>
 
           <p className="connection-cta-desc">

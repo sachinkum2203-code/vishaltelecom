@@ -110,7 +110,7 @@ export default function Navbar({ onOpenAvailability }) {
           <div className="top-info-left">
             <span className="info-item"><MapPin size={13} className="text-red" /> Subhash Nagar, Sonipat</span>
             <span className="info-item"><PhoneCall size={13} className="text-red" /> +91 70271 04250</span>
-            <span className="info-item"><Clock size={13} className="text-red" /> Mon - Sat 9:00 AM - 8:00 PM</span>
+            <span className="info-item"><Clock size={13} className="text-red" /> Mon - Sat 9:00 AM - 5:00 PM</span>
           </div>
           <div className="top-info-right">
             <div className="top-socials">

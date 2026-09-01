@@ -67,16 +67,16 @@ export default function Hero({ onOpenAvailability, onOpenSpeedTest }) {
 
               <div className="inline-feat-item">
                 <div className="feat-icon-bubble">
-                  <Gauge size={18} className="text-red" />
+                  <Wifi size={18} className="text-red" />
                 </div>
-                <span className="feat-label">High-Speed<br />Internet</span>
+                <span className="feat-label">WiFi 6 Wireless<br />Connectivity</span>
               </div>
 
               <div className="inline-feat-item">
                 <div className="feat-icon-bubble">
                   <Tv size={18} className="text-red" />
                 </div>
-                <span className="feat-label">OTT<br />Entertainment</span>
+                <span className="feat-label">OTT & Live TV<br />Entertainment</span>
               </div>
 
               <div className="inline-feat-item">
@@ -110,12 +110,12 @@ export default function Hero({ onOpenAvailability, onOpenSpeedTest }) {
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="User 1" className="avatar-img" />
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="User 2" className="avatar-img" />
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="User 3" className="avatar-img" />
-                <div className="avatar-count-badge">10K+</div>
+                <div className="avatar-count-badge">1K+</div>
               </div>
               <div className="banner-divider"></div>
               <div className="trusted-text-block">
                 <span className="t-label">Trusted by</span>
-                <span className="t-val">10,000+ Happy Customers</span>
+                <span className="t-val">1,000+ Happy Customers</span>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ export default function Hero({ onOpenAvailability, onOpenSpeedTest }) {
               <Users size={24} className="text-red" />
             </div>
             <div className="bstat-meta">
-              <span className="bstat-val">10K+</span>
+              <span className="bstat-val">1K+</span>
               <span className="bstat-lbl">Happy Customers</span>
             </div>
           </div>

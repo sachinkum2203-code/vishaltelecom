@@ -6,19 +6,19 @@ import './About.css';
 export default function About() {
   const stats = [
     {
-      value: '15+',
-      label: 'Years Experience',
-      sub: 'Leading regional telecom operator',
+      value: 'Free',
+      label: 'Installation',
+      sub: 'Quick & hassle-free setup',
+    },
+    {
+      value: 'WiFi 6',
+      label: 'Ready',
+      sub: 'Faster wireless connectivity',
     },
     {
       value: '99.9%',
       label: 'Network Uptime',
       sub: 'Monitored 24/7 SLA infrastructure',
-    },
-    {
-      value: '50K+',
-      label: 'Connected Homes',
-      sub: 'Across residential & commercial zones',
     },
     {
       value: '24/7',

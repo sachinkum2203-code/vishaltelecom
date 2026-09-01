@@ -18,14 +18,11 @@ export default function WirelessNetwork({ onOpenAvailability }) {
         {/* Left Column: Text & Features */}
         <div className="wireless-left">
           <h2 className="wireless-title">
-
-
-
-            Powerful WiFi. <span className="text-red">Every Corner Covered.</span>
+            WiFi 6 Wireless Solutions <span className="text-red">for Every Space</span>
           </h2>
 
           <p className="wireless-text">
-            Create a reliable wireless network designed to provide fast and stable connectivity across homes, offices and commercial spaces. Say goodbye to buffer wheels and WiFi dead zones.
+            Create reliable wireless connectivity designed to provide fast and stable connectivity across homes, offices and commercial spaces. Say goodbye to buffer wheels and WiFi dead zones.
           </p>
 
           <div className="wireless-features-grid">
@@ -41,7 +38,7 @@ export default function WirelessNetwork({ onOpenAvailability }) {
             className="btn btn-red wireless-cta"
             onClick={() => {
               const message = encodeURIComponent(
-                'Hello VS Telecom! I am interested in your Powerful Wi-Fi & Wireless Network Solutions. Please connect with me.'
+                'Hello VS Telecom! I am interested in your Powerful Wi-Fi & Wireless Connectivity Solutions. Please connect with me.'
               );
               window.open(`https://wa.me/917027104250?text=${message}`, '_blank');
             }}

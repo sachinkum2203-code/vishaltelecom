@@ -1,20 +1,12 @@
 import React from 'react';
-import { Wifi, Router, Tv, Film, Camera, Network } from 'lucide-react';
+import { Router, Film, Camera, Network } from 'lucide-react';
 import './Services.css';
 
 export default function Services({ onOpenAvailability }) {
   const services = [
     {
-      id: 'internet',
-      title: 'High-Speed Internet',
-      description: 'Reliable broadband connectivity for your everyday digital life. Enjoy seamless browsing, video calls, and HD streaming.',
-      icon: Wifi,
-      badge: 'Gigabit Fiber',
-      link: '#plans',
-    },
-    {
       id: 'wireless',
-      title: 'Wireless Network',
+      title: 'Wireless Connectivity',
       description: 'Strong wireless connectivity across your home or office. Dual-band Wi-Fi 6 coverage eliminates dead zones.',
       icon: Router,
       badge: 'Whole-Home Mesh',
@@ -22,18 +14,10 @@ export default function Services({ onOpenAvailability }) {
     },
     {
       id: 'ott',
-      title: 'OTT Entertainment',
+      title: 'OTT & Live TV Entertainment',
       description: 'Enjoy popular entertainment platforms with selected plans. Stream movies, original series, and kids content.',
       icon: Film,
       badge: 'Streaming Ready',
-      link: '#ott',
-    },
-    {
-      id: 'tv',
-      title: 'TV Channels',
-      description: 'Access entertainment, news, sports, movies and regional channels with ultra-clear HD quality picture.',
-      icon: Tv,
-      badge: '350+ Live Channels',
       link: '#ott',
     },
     {
@@ -46,8 +30,8 @@ export default function Services({ onOpenAvailability }) {
     },
     {
       id: 'network',
-      title: 'Network Solutions',
-      description: 'Reliable networking infrastructure for residential and business requirements. Dedicated static IPs & SLA support.',
+      title: 'LAN Solutions',
+      description: 'Fast, secure LAN solutions for homes, offices, and businesses with stable connectivity and better performance.',
       icon: Network,
       badge: 'Enterprise Grade',
       link: '#network',

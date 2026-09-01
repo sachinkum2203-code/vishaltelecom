@@ -68,7 +68,7 @@ export default function App() {
         {/* 8. OTT + TV Channels Section */}
         <OttEntertainment />
 
-        {/* 11. Wireless Network Section */}
+        {/* 11. Wireless Connectivity Section */}
         <WirelessNetwork onOpenAvailability={handleOpenAvailability} />
 
         {/* 12. CCTV Surveillance Section */}

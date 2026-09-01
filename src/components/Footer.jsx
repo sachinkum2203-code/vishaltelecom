@@ -58,7 +58,7 @@ export default function Footer() {
               <img src={vsLogo} alt="VS TELECOM" className="footer-logo-img" />
             </a>
             <p className="footer-description">
-              Premium internet, OTT entertainment, CCTV surveillance and smart connectivity solutions for modern homes and businesses.
+              Premium internet, OTT & Live TV entertainment, CCTV surveillance and smart connectivity solutions for modern homes and businesses.
             </p>
             <div className="footer-social-icons">
               <a href="https://www.instagram.com/vs_telecommunication/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
@@ -101,10 +101,10 @@ export default function Footer() {
             </h4>
             <ul className="footer-services-list">
               <li><a href="#plans"><Wifi size={17} className="service-icon" /><span>High-Speed Internet</span></a></li>
-              <li><a href="#wireless"><Share2 size={17} className="service-icon" /><span>Wireless Network</span></a></li>
-              <li><a href="#ott"><Tv size={17} className="service-icon" /><span>OTT & TV Entertainment</span></a></li>
+              <li><a href="#wireless"><Share2 size={17} className="service-icon" /><span>Wireless Connectivity</span></a></li>
+              <li><a href="#ott"><Tv size={17} className="service-icon" /><span>OTT & Live TV Entertainment</span></a></li>
               <li><a href="#cctv"><Camera size={17} className="service-icon" /><span>CCTV Surveillance</span></a></li>
-              <li><a href="#wireless"><Router size={17} className="service-icon" /><span>Network Solutions</span></a></li>
+              <li><a href="#services"><Router size={17} className="service-icon" /><span>LAN Solutions</span></a></li>
               <li><a href="#free-installation"><Gift size={17} className="service-icon" /><span>Free Installation</span></a></li>
               <li><a href="#contact"><Headphones size={17} className="service-icon" /><span>Customer Support</span></a></li>
             </ul>
@@ -133,7 +133,7 @@ export default function Footer() {
                 </div>
                 <div className="contact-item-text">
                   <strong>+91 70271 04250</strong>
-                  <span>Mon - Sat, 9:00 AM - 8:00 PM</span>
+                  <span>Mon - Sat, 9:00 AM - 5:00 PM</span>
                 </div>
               </div>
 
