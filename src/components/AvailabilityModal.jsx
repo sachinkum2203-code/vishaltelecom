@@ -56,9 +56,10 @@ export default function AvailabilityModal({ isOpen, onClose, onSelectPlanAndScro
                     type="tel"
                     required
                     pattern="[0-9]{10}"
+                    maxLength={10}
                     placeholder="Enter 10-digit mobile number"
                     value={mobileInput}
-                    onChange={(e) => setMobileInput(e.target.value)}
+                    onChange={(e) => setMobileInput(e.target.value.replace(/[^0-9]/g, '').slice(0, 10))}
                     className="form-input icon-padded"
                   />
                 </div>
@@ -71,9 +72,11 @@ export default function AvailabilityModal({ isOpen, onClose, onSelectPlanAndScro
                   <input
                     type="text"
                     required
-                    placeholder="Enter Area name or 6-digit PIN code"
+                    pattern="[0-9]{6}"
+                    maxLength={6}
+                    placeholder="Enter 6-digit PIN code"
                     value={pinInput}
-                    onChange={(e) => setPinInput(e.target.value)}
+                    onChange={(e) => setPinInput(e.target.value.replace(/[^0-9]/g, '').slice(0, 6))}
                     className="form-input icon-padded"
                   />
                 </div>

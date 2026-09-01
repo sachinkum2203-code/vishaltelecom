@@ -129,7 +129,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="contact-item">
+              <a href="tel:+917027104250" className="contact-item">
                 <div className="contact-icon-badge">
                   <Phone size={17} />
                 </div>
@@ -137,19 +137,17 @@ export default function Footer() {
                   <strong>+91 70271 04250</strong>
                   <span>Mon - Sat, 9:00 AM - 5:00 PM</span>
                 </div>
-              </div>
+              </a>
 
-              <div className="contact-item">
+              <a href="mailto:vstelicommunication@gmail.com" className="contact-item">
                 <div className="contact-icon-badge">
                   <Mail size={17} />
                 </div>
                 <div className="contact-item-text">
-                  <a href="mailto:vstelicommunication@gmail.com" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-                    <strong>vstelicommunication@gmail.com</strong>
-                  </a>
+                  <strong>vstelicommunication@gmail.com</strong>
                   <span>We'll respond within 24 hours</span>
                 </div>
-              </div>
+              </a>
 
               <button
                 className="footer-cta-btn"

@@ -161,6 +161,19 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease-in-out;
+}
+
+a.contact-item:hover .contact-icon-badge {
+  background-color: #D71920;
+  border-color: #D71920;
+  color: #FFFFFF;
+}
+
+a.contact-item:hover strong {
+  color: #D71920;
 }
 
 .contact-icon-badge {
