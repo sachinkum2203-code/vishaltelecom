@@ -26,23 +26,22 @@ export default function App() {
   const [selectedPlanForForm, setSelectedPlanForForm] = useState(null);
 
   useEffect(() => {
-    const plansEl = document.getElementById('plans');
-    if (!plansEl) return;
+    const handleScrollPopup = () => {
+      if (hasTriggeredPlansPopup) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasTriggeredPlansPopup) {
-            setIsAvailabilityOpen(true);
-            setHasTriggeredPlansPopup(true);
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
+      const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalScrollHeight > 0) {
+        const scrollPercentage = (window.scrollY / totalScrollHeight) * 100;
+        // Trigger popup when user reaches 30-40% scroll depth (set at 35%)
+        if (scrollPercentage >= 35) {
+          setIsAvailabilityOpen(true);
+          setHasTriggeredPlansPopup(true);
+        }
+      }
+    };
 
-    observer.observe(plansEl);
-    return () => observer.disconnect();
+    window.addEventListener('scroll', handleScrollPopup, { passive: true });
+    return () => window.removeEventListener('scroll', handleScrollPopup);
   }, [hasTriggeredPlansPopup]);
 
   const handleSelectPlan = (plan) => {
