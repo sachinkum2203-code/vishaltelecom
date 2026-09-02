@@ -10,16 +10,16 @@ export default function Plans({ onSelectPlan }) {
       id: 'starter',
       name: 'Starter',
       subtitle: 'Best for browsing & social media',
-      speed: '50 Mbps',
+      speed: '100 Mbps',
       price: {
         monthly: 499,
-        halfYearly: 449,
-        yearly: 399,
+        halfYearly: 474,
+        yearly: 449,
       },
       isPopular: false,
       ctaText: 'Get Started',
       features: [
-        'High-speed internet (50 Mbps)',
+        'High-speed internet (100 Mbps)',
         'Unlimited data',
         'Multiple device support',
         'Free Installation',
@@ -31,17 +31,17 @@ export default function Plans({ onSelectPlan }) {
       id: 'family',
       name: 'Family',
       subtitle: 'Best for families & entertainment',
-      speed: '150 Mbps',
+      speed: '200 Mbps',
       price: {
-        monthly: 799,
-        halfYearly: 719,
-        yearly: 639,
+        monthly: 599,
+        halfYearly: 569,
+        yearly: 539,
       },
       isPopular: true,
       badgeText: 'MOST POPULAR',
       ctaText: 'Choose Plan',
       features: [
-        'Faster internet speed (150 Mbps)',
+        'Faster internet speed (200 Mbps)',
         'Unlimited data',
         'OTT benefits (Hotstar, ZEE5, SonyLIV)',
         '200+ Live TV channels',
@@ -50,17 +50,17 @@ export default function Plans({ onSelectPlan }) {
       ],
     },
     {
-      id: 'premium',
-      name: 'Premium',
+      id: 'business',
+      name: 'Business Pro',
       subtitle: 'Best for streaming, gaming & work',
       speed: '300 Mbps',
       price: {
-        monthly: 1199,
-        halfYearly: 1079,
-        yearly: 959,
+        monthly: 799,
+        halfYearly: 759,
+        yearly: 719,
       },
       isPopular: false,
-      ctaText: 'Get Premium',
+      ctaText: 'Get Business Pro',
       features: [
         'Ultra-fast internet (300 Mbps)',
         'Unlimited data',
@@ -69,27 +69,6 @@ export default function Plans({ onSelectPlan }) {
         '350+ Live TV channels',
         'Priority Support 24/7',
         'Free Installation',
-      ],
-    },
-    {
-      id: 'business',
-      name: 'Business Pro',
-      subtitle: 'Best for offices & heavy streaming',
-      speed: '500 Mbps',
-      price: {
-        monthly: 1999,
-        halfYearly: 1799,
-        yearly: 1599,
-      },
-      isPopular: false,
-      ctaText: 'Get Business Pro',
-      features: [
-        'Ultra Gigabit Fiber (500 Mbps)',
-        'Symmetrical Upload & Download',
-        'Static IP Available on Request',
-        'Full OTT & Premium TV Package',
-        '24/7 VIP Dedicated Account Manager',
-        'Free Installation & Router Setup',
       ],
     },
   ];
@@ -154,10 +133,10 @@ export default function Plans({ onSelectPlan }) {
                       <span>{plan.speed}</span>
                     </span>
                     {billingCycle === 'halfYearly' && (
-                      <span className="savings-badge-card">SAVE 10%</span>
+                      <span className="savings-badge-card">SAVE 5%</span>
                     )}
                     {billingCycle === 'yearly' && (
-                      <span className="savings-badge-card">SAVE 20%</span>
+                      <span className="savings-badge-card">SAVE 10%</span>
                     )}
                   </div>
                   <h3 className="plan-name">{plan.name}</h3>
@@ -172,8 +151,8 @@ export default function Plans({ onSelectPlan }) {
                   </div>
                   <div className="billing-note">
                     {billingCycle === 'monthly' && 'Billed monthly • Cancel anytime'}
-                    {billingCycle === 'halfYearly' && 'Billed half-yearly (Save 10%)'}
-                    {billingCycle === 'yearly' && 'Billed annually (Best savings + Free Router)'}
+                    {billingCycle === 'halfYearly' && 'Billed half-yearly (Save 5%)'}
+                    {billingCycle === 'yearly' && 'Billed annually (Save 10% + Free Router)'}
                   </div>
                 </div>
 

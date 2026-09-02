@@ -73,7 +73,7 @@ export default function Footer() {
               <a href="https://wa.me/917027104250" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="WhatsApp">
                 <WhatsappIcon size={18} />
               </a>
-              <a href="mailto:vstelicommunication@gmail.com" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Email">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vstelicommunication@gmail.com" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Email">
                 <Mail size={18} />
               </a>
             </div>
@@ -129,7 +129,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <a href="tel:+917027104250" className="contact-item">
+              <div className="contact-item">
                 <div className="contact-icon-badge">
                   <Phone size={17} />
                 </div>
@@ -137,9 +137,9 @@ export default function Footer() {
                   <strong>+91 70271 04250</strong>
                   <span>Mon - Sat, 9:00 AM - 5:00 PM</span>
                 </div>
-              </a>
+              </div>
 
-              <a href="mailto:vstelicommunication@gmail.com" className="contact-item">
+              <div className="contact-item">
                 <div className="contact-icon-badge">
                   <Mail size={17} />
                 </div>
@@ -147,7 +147,7 @@ export default function Footer() {
                   <strong>vstelicommunication@gmail.com</strong>
                   <span>We'll respond within 24 hours</span>
                 </div>
-              </a>
+              </div>
 
               <button
                 className="footer-cta-btn"
