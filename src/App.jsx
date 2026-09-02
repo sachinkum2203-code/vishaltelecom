@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Plans from './components/Plans';
@@ -11,18 +11,39 @@ import SocialSection from './components/SocialSection';
 import Benefits from './components/Benefits';
 import About from './components/About';
 import ConnectionCta from './components/ConnectionCta';
-
-
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+import AvailabilityModal from './components/AvailabilityModal';
 import SpeedTestModal from './components/SpeedTestModal';
 import FloatingWhatsapp from './components/FloatingWhatsapp';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   const [isSpeedTestOpen, setIsSpeedTestOpen] = useState(false);
+  const [isAvailabilityOpen, setIsAvailabilityOpen] = useState(false);
+  const [hasTriggeredPlansPopup, setHasTriggeredPlansPopup] = useState(false);
   const [selectedPlanForForm, setSelectedPlanForForm] = useState(null);
+
+  useEffect(() => {
+    const plansEl = document.getElementById('plans');
+    if (!plansEl) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasTriggeredPlansPopup) {
+            setIsAvailabilityOpen(true);
+            setHasTriggeredPlansPopup(true);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(plansEl);
+    return () => observer.disconnect();
+  }, [hasTriggeredPlansPopup]);
 
   const handleSelectPlan = (plan) => {
     setSelectedPlanForForm(plan);
@@ -33,10 +54,7 @@ export default function App() {
   };
 
   const handleOpenAvailability = () => {
-    const message = encodeURIComponent(
-      'Hello VS Telecom! I want to check broadband/fiber availability in my area. Please connect with me.'
-    );
-    window.open(`https://wa.me/917027104250?text=${message}`, '_blank');
+    setIsAvailabilityOpen(true);
   };
 
   const handleOpenSpeedTest = () => {
@@ -94,6 +112,16 @@ export default function App() {
 
       {/* 16. Footer */}
       <Footer />
+
+      {/* Availability / Contact Check Modal */}
+      <AvailabilityModal
+        isOpen={isAvailabilityOpen}
+        onClose={() => setIsAvailabilityOpen(false)}
+        onSelectPlanAndScroll={() => {
+          const plansEl = document.getElementById('plans');
+          if (plansEl) plansEl.scrollIntoView({ behavior: 'smooth' });
+        }}
+      />
 
       {/* Speed Test Simulator Modal */}
       <SpeedTestModal
