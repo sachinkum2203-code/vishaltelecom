@@ -42,7 +42,7 @@ export default function SocialSection() {
       name: 'Facebook',
       desc: 'Join our local community page for customer news and support updates.',
       icon: FacebookIcon,
-      url: 'https://www.facebook.com/profile.php?id=61593772052305&sk=about',
+      url: 'https://www.facebook.com/vishal.tawar.925?mibextid=wwXIfr',
       color: '#D71920',
     },
     {

@@ -114,7 +114,7 @@ export default function Navbar({ onOpenAvailability }) {
           </div>
           <div className="top-info-right">
             <div className="top-socials">
-              <a href="https://www.facebook.com/profile.php?id=61593772052305&sk=about" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon size={12} /></a>
+              <a href="https://www.facebook.com/vishal.tawar.925?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon size={12} /></a>
               <a href="https://www.instagram.com/vs_telecommunication/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon size={12} /></a>
               <a href="https://www.youtube.com/@VS_TELECOMMUNICATION" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><YoutubeIcon size={12} /></a>
             </div>
@@ -228,7 +228,7 @@ export default function Navbar({ onOpenAvailability }) {
               <h4 className="m-social-heading">Follow Us</h4>
               <div className="m-social-icons">
                 <a
-                  href="https://www.facebook.com/profile.php?id=61593772052305&sk=about"
+                  href="https://www.facebook.com/vishal.tawar.925?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"

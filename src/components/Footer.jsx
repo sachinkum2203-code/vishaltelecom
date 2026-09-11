@@ -64,7 +64,7 @@ export default function Footer() {
               <a href="https://www.instagram.com/vs_telecommunication/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
                 <InstagramIcon size={18} />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61593772052305&sk=about" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
+              <a href="https://www.facebook.com/vishal.tawar.925?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
                 <FacebookIcon size={18} />
               </a>
               <a href="https://www.youtube.com/@VS_TELECOMMUNICATION" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="YouTube">

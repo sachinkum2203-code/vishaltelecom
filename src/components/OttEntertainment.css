@@ -4,71 +4,61 @@
   padding-block: clamp(40px, 6vw, 70px) !important;
 }
 
-/* OTT 8-App Grid Row */
-.ott-row-grid {
+/* OTT Square/Tile Grid */
+.ott-square-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px clamp(12px, 2vw, 24px);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(16px, 2.5vw, 24px) clamp(12px, 2vw, 20px);
   max-width: 960px;
-  margin: 0 auto clamp(24px, 4vh, 40px) auto;
+  margin: 0 auto clamp(28px, 4vh, 48px) auto;
   align-items: start;
 }
 
-.ott-app-item {
+.ott-square-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
+  cursor: pointer;
 }
 
-.ott-app-box {
+.ott-square-box {
   width: 100%;
-  aspect-ratio: 2.1 / 1;
-  min-height: 72px;
-  border-radius: 12px;
+  aspect-ratio: 1.8 / 1;
+  min-height: 64px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
-}
-
-.ott-app-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
-}
-
-.ott-app-box.light-box {
-  border: 1.5px solid #E5E7EB;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-
-.ott-app-info {
-  margin-top: 8px;
-  text-align: left;
-  width: 100%;
-}
-
-.ott-app-name {
-  font-family: var(--font-heading);
-  font-size: 0.86rem;
-  font-weight: 800;
-  color: var(--text-dark);
-  line-height: 1.2;
-  margin-bottom: 2px;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  position: relative;
 }
 
-.ott-app-sub {
-  font-size: 0.73rem;
-  font-weight: 500;
-  color: #6B7280;
+.ott-square-item:hover .ott-square-box {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+.ott-square-box.light-square {
+  border: 1.5px solid #E5E7EB;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ott-square-name {
+  margin-top: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-dark);
   line-height: 1.25;
+  text-align: center;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -113,27 +103,19 @@
     padding-block: clamp(20px, 3vh, 36px) !important;
   }
 
-  .ott-row-grid {
-    gap: 12px clamp(10px, 1.5vw, 18px);
-    margin-bottom: 16px;
+  .ott-square-grid {
+    gap: 14px 12px;
+    margin-bottom: 20px;
   }
 
-  .ott-app-box {
-    min-height: 56px;
-    padding: 6px 10px;
-    border-radius: 10px;
+  .ott-square-box {
+    min-height: 54px;
+    border-radius: 12px;
   }
 
-  .ott-app-info {
-    margin-top: 4px;
-  }
-
-  .ott-app-name {
-    font-size: 0.8rem;
-  }
-
-  .ott-app-sub {
-    font-size: 0.68rem;
+  .ott-square-name {
+    font-size: 0.78rem;
+    margin-top: 5px;
   }
 
   .ott-disclaimer-box {
@@ -145,30 +127,33 @@
   }
 }
 
-@media (max-width: 1100px) {
-  .ott-row-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
+@media (max-width: 900px) {
+  .ott-square-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 12px;
   }
 }
 
 @media (max-width: 600px) {
-  .ott-row-grid {
+  .ott-square-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px 12px;
+    gap: 12px 10px;
   }
-  .ott-app-box {
-    min-height: 60px;
+  .ott-square-item:nth-child(n+15) {
+    display: none !important;
+  }
+  .ott-square-box {
+    min-height: 52px;
     border-radius: 10px;
   }
-  .ott-app-name {
-    font-size: 0.8rem;
-  }
-  .ott-app-sub {
-    font-size: 0.7rem;
+  .ott-square-name {
+    font-size: 0.75rem;
+    margin-top: 4px;
   }
   .ott-disclaimer-box {
     flex-direction: column;
     text-align: center;
   }
 }
+
+

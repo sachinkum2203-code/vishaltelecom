@@ -44,7 +44,7 @@ export default function Plans({ onSelectPlan }) {
         'Faster internet speed (200 Mbps)',
         'Unlimited data',
         'OTT benefits (Hotstar, ZEE5, SonyLIV)',
-        '200+ Live TV channels',
+        '300+ Live TV channels',
         'Free Installation',
         'High-Speed Wi-Fi 6 Router',
       ],
@@ -65,8 +65,8 @@ export default function Plans({ onSelectPlan }) {
         'Ultra-fast internet (300 Mbps)',
         'Unlimited data',
         'Multiple devices connected',
-        'OTT entertainment (Netflix, Prime, Hotstar)',
-        '350+ Live TV channels',
+        'OTT entertainment (ZEE5, Bhakti, Hotstar)',
+        '300+ Live TV channels',
         'Priority Support 24/7',
         'Free Installation',
       ],
@@ -156,11 +156,15 @@ export default function Plans({ onSelectPlan }) {
                   </div>
                 </div>
 
-                <div className="free-install-ribbon">
-                  <Gift size={15} className="text-red" />
-                  <span>Free Installation Included</span>
+                <div className="free-install-row">
+                  <div className="free-install-ribbon">
+                    <Gift size={15} className="text-red" />
+                    <span>Free Installation Included</span>
+                  </div>
+                  {plan.features.some((f) => f.toLowerCase().includes('ott')) && (
+                    <span className="extra-charge-tag">OTT EXTRA CHARGES</span>
+                  )}
                 </div>
-
 
                 <ul className="plan-features">
                   {plan.features.map((feat, idx) => (

@@ -21,7 +21,7 @@ export default function Benefits() {
     },
     {
       title: 'Entertainment Ready',
-      desc: 'OTT apps & 350+ Live TV channels bundled with eligible plans.',
+      desc: 'OTT apps & 300+ Live TV channels bundled with eligible plans.',
       icon: Tv,
     },
     {
