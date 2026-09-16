@@ -110,12 +110,12 @@ export default function Hero({ onOpenAvailability, onOpenSpeedTest }) {
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="User 1" className="avatar-img" />
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="User 2" className="avatar-img" />
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="User 3" className="avatar-img" />
-                <div className="avatar-count-badge">1K+</div>
+                <div className="avatar-count-badge">100+</div>
               </div>
               <div className="banner-divider"></div>
               <div className="trusted-text-block">
                 <span className="t-label">Trusted by</span>
-                <span className="t-val">1,000+ Happy Customers</span>
+                <span className="t-val">100+ Happy Customers</span>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ export default function Hero({ onOpenAvailability, onOpenSpeedTest }) {
               <Users size={24} className="text-red" />
             </div>
             <div className="bstat-meta">
-              <span className="bstat-val">1K+</span>
+              <span className="bstat-val">100+</span>
               <span className="bstat-lbl">Happy Customers</span>
             </div>
           </div>

@@ -247,20 +247,17 @@
 }
 
 .extra-charge-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background-color: var(--red-light);
-  color: var(--red-cta);
-  font-family: var(--font-heading);
-  font-size: 0.68rem;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
-  border: 1px dashed rgba(215, 25, 32, 0.4);
-  white-space: nowrap;
-  letter-spacing: 0.02em;
-  flex-shrink: 0;
+  display: block;
+  background: none;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  border: none;
+  letter-spacing: normal;
+  margin-top: 2px;
 }
 
 .plan-features {
@@ -387,11 +384,11 @@
     font-size: 1.45rem;
   }
 
-  .free-install-ribbon,
-  .extra-charge-tag {
+  .free-install-ribbon {
     padding: 3px 8px;
     font-size: 0.68rem;
   }
+
 
   .plan-features {
     gap: 3px;

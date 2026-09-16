@@ -44,6 +44,7 @@ export default function Plans({ onSelectPlan }) {
         'Faster internet speed (200 Mbps)',
         'Unlimited data',
         'OTT benefits (Hotstar, ZEE5, SonyLIV)',
+        'OTT Extra Charges',
         '300+ Live TV channels',
         'Free Installation',
         'High-Speed Wi-Fi 6 Router',
@@ -66,6 +67,7 @@ export default function Plans({ onSelectPlan }) {
         'Unlimited data',
         'Multiple devices connected',
         'OTT entertainment (ZEE5, Bhakti, Hotstar)',
+        'OTT Extra Charges',
         '300+ Live TV channels',
         'Priority Support 24/7',
         'Free Installation',
@@ -79,9 +81,6 @@ export default function Plans({ onSelectPlan }) {
         {/* Section Header */}
         <div className="section-header">
           <h2 className="section-title">
-
-
-
             Choose The <span className="text-red">Perfect Internet Plan</span>
           </h2>
           <p className="section-subtitle">
@@ -161,9 +160,6 @@ export default function Plans({ onSelectPlan }) {
                     <Gift size={15} className="text-red" />
                     <span>Free Installation Included</span>
                   </div>
-                  {plan.features.some((f) => f.toLowerCase().includes('ott')) && (
-                    <span className="extra-charge-tag">OTT EXTRA CHARGES</span>
-                  )}
                 </div>
 
                 <ul className="plan-features">
