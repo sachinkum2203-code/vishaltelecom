@@ -17,6 +17,20 @@ import {
 import vsLogo from '../assets/vs_telecom_logo_transparent.png';
 import './Footer.css';
 
+const SitemapTreeIcon = ({ size = 18, className = "" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+    <rect x="2" y="16" width="5" height="6" rx="1"></rect>
+    <rect x="9.5" y="16" width="5" height="6" rx="1"></rect>
+    <rect x="17" y="16" width="5" height="6" rx="1"></rect>
+    <path d="M12 8v4"></path>
+    <path d="M4.5 12h15"></path>
+    <path d="M4.5 12v4"></path>
+    <path d="M12 12v4"></path>
+    <path d="M19.5 12v4"></path>
+  </svg>
+);
+
 const InstagramIcon = ({ size = 18, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -61,11 +75,14 @@ export default function Footer() {
               Premium internet, OTT & Live TV entertainment, CCTV surveillance and smart connectivity solutions for modern homes and businesses.
             </p>
             <div className="footer-social-icons">
-              <a href="https://www.instagram.com/vs_telecommunication/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
-                <InstagramIcon size={18} />
+              <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Sitemap XML" title="XML Sitemap">
+                <SitemapTreeIcon size={18} />
               </a>
               <a href="https://www.facebook.com/vishal.tawar.925?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
                 <FacebookIcon size={18} />
+              </a>
+              <a href="https://www.instagram.com/vs_telecommunication/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
+                <InstagramIcon size={18} />
               </a>
               <a href="https://www.youtube.com/@VS_TELECOMMUNICATION" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="YouTube">
                 <YoutubeIcon size={18} />

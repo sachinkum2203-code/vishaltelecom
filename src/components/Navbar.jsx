@@ -14,9 +14,24 @@ import {
   Tv,
   Camera,
   Users,
+  Map,
 } from 'lucide-react';
 import vsLogo from '../assets/vs_telecom_logo_transparent.png';
 import './Navbar.css';
+
+const SitemapTreeIcon = ({ size = 12, className = "" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+    <rect x="2" y="16" width="5" height="6" rx="1"></rect>
+    <rect x="9.5" y="16" width="5" height="6" rx="1"></rect>
+    <rect x="17" y="16" width="5" height="6" rx="1"></rect>
+    <path d="M12 8v4"></path>
+    <path d="M4.5 12h15"></path>
+    <path d="M4.5 12v4"></path>
+    <path d="M12 12v4"></path>
+    <path d="M19.5 12v4"></path>
+  </svg>
+);
 
 const InstagramIcon = ({ size = 12 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -114,6 +129,7 @@ export default function Navbar({ onOpenAvailability }) {
           </div>
           <div className="top-info-right">
             <div className="top-socials">
+              <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" aria-label="Sitemap XML" title="XML Sitemap"><SitemapTreeIcon size={12} /></a>
               <a href="https://www.facebook.com/vishal.tawar.925?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon size={12} /></a>
               <a href="https://www.instagram.com/vs_telecommunication/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon size={12} /></a>
               <a href="https://www.youtube.com/@VS_TELECOMMUNICATION" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><YoutubeIcon size={12} /></a>
@@ -227,6 +243,15 @@ export default function Navbar({ onOpenAvailability }) {
             <div className="mobile-social-section">
               <h4 className="m-social-heading">Follow Us</h4>
               <div className="m-social-icons">
+                <a
+                  href="/sitemap.xml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Sitemap XML"
+                  title="XML Sitemap"
+                >
+                  <SitemapTreeIcon size={16} />
+                </a>
                 <a
                   href="https://www.facebook.com/vishal.tawar.925?mibextid=wwXIfr"
                   target="_blank"
